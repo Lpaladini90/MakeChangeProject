@@ -88,7 +88,7 @@ public class CashRegister {
 				} else if (changeDue >= .01) {
 					int pennies = (int) Math.round((changeDue / oneCents));
 					System.out.print("Pennies: " + pennies);
-					changeDue -=  ((oneCents * pennies) * 100);
+					changeDue -= ((oneCents * pennies) * 100);
 				}
 
 			}
@@ -101,4 +101,3 @@ public class CashRegister {
 
 	}
 }
-
