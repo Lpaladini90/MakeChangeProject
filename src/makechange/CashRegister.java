@@ -1,25 +1,22 @@
 package makechange;
+
 import java.util.Scanner;
+
 public class CashRegister {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
 
-		
 		System.out.println("What is the cost of the item?");
 		double costOfItem = sc.nextDouble();
-		
-		
-		
+
 		System.out.println("How much money was received by the customer to pay for the item?");
 		double moneyRecieved = sc.nextDouble();
-		
+
 		double changeDue = (moneyRecieved - costOfItem);
-		
+
 		if (moneyRecieved == costOfItem) {
 			System.out.println("No change, exact cost was provided. ");
-		}
-		else if (moneyRecieved > costOfItem) {
+		} else if (moneyRecieved > costOfItem) {
 			double hundreds = 100.0;
 			double fifties = 50.0;
 			double twenties = 20.0;
@@ -41,8 +38,7 @@ public class CashRegister {
 					int fiftyDollarBills = (int) (changeDue / fifties);
 					System.out.print("\tFifty Dollar Bills: " + fiftyDollarBills + ", ");
 					changeDue -= (fifties * fiftyDollarBills);
-				}
-				else if (changeDue >= 20) {
+				} else if (changeDue >= 20) {
 					int twentyDollarBills = (int) (changeDue / twenties);
 					System.out.print("Twenty Dollar Bills: " + twentyDollarBills + ", ");
 					changeDue -= (twenties * twentyDollarBills);
@@ -73,7 +69,7 @@ public class CashRegister {
 				} else if (changeDue >= .01) {
 					int pennies = (int) Math.round((changeDue / oneCents));
 					System.out.print("Pennies: " + pennies);
-					changeDue -=  ((oneCents * pennies) * 100);
+					changeDue -= ((oneCents * pennies) * 100);
 					changeDue -= ((oneCents * pennies) * 100);
 				}
 
