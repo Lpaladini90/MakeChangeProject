@@ -16,7 +16,7 @@ public class CashRegister {
 		System.out.printf("The total price for " + purchasedItem + " with tax is $%.2f.\n", total);
 		System.out.println("How much money was received by the customer to pay for the " + purchasedItem + "?");
 		double moneyRecieved = sc.nextDouble();
-		double needMore = (total - moneyRecieved);
+		
 		double changeDue = (moneyRecieved - total);
 		
 		if (moneyRecieved == total) {
