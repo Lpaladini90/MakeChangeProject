@@ -4,25 +4,22 @@ public class CashRegister {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("What is the item being purchase?");
-		String purchasedItem = sc.nextLine();
+
 		
 		System.out.println("What is the cost of the item?");
 		double costOfItem = sc.nextDouble();
 		
-		double tax = .067;
-		double total = costOfItem + (costOfItem * tax);
 		
-		System.out.printf("The total price for " + purchasedItem + " with tax is $%.2f.\n", total);
-		System.out.println("How much money was received by the customer to pay for the " + purchasedItem + "?");
+		
+		System.out.println("How much money was received by the customer to pay for the item?");
 		double moneyRecieved = sc.nextDouble();
 		
-		double changeDue = (moneyRecieved - total);
+		double changeDue = (moneyRecieved - costOfItem);
 		
-		if (moneyRecieved == total) {
+		if (moneyRecieved == costOfItem) {
 			System.out.println("No change, exact cost was provided. ");
 		}
-		else if (moneyRecieved > total) {
+		else if (moneyRecieved > costOfItem) {
 			double hundreds = 100.0;
 			double fifties = 50.0;
 			double twenties = 20.0;
@@ -82,7 +79,7 @@ public class CashRegister {
 
 			}
 		} else {
-			System.out.println("The " + moneyRecieved + " is not enough to cover the cost of " + purchasedItem + ".");
+			System.out.println("$" + moneyRecieved + " is not enough to cover the cost.");
 			sc.close();
 		}
 
