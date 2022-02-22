@@ -156,7 +156,7 @@ This program is called Make Change (Cash Register)
 
 
 ###                        Lessons Learned                       ###
-Most of the tech I used to write this program I understood already although there was a few things that I was able to hone in on as I didnt have
+Most of the tech I used to write this program I understood already although there were a few things that I was able to hone in on as I didnt have
 the best experience using them prior.
 
 Those items were:
